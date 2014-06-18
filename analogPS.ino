@@ -1,3 +1,8 @@
+//this is analog PS 2 controller
+//ane ambil dari stick PS 2
+//created by ismail lowkey
+//www.ismail-lowkey.blogspot.com
+
 int RY,RX,LY,LX;
 
 void analogPS(){
@@ -6,20 +11,20 @@ void analogPS(){
   int ALY = map(analogRead(A2), 0 , 1023 , 0 , 255);
   int ALX = map(analogRead(A3), 0 , 1023 , 0 , 255);
 
-  if(ARY==124){RY=ARY+4;}
-  else if(ARY==254){RY=ARY+1;}
+  if(ARY>=120 && ARY <=130){RY=128;}
+  else if(ARY>=250){RY=255;}
   else {RY=ARY;}
   
-  if(ARX==125){RX=ARX+3;}
-  else if(ARX==254){RX=ARX+1;}
+  if(ARX>=120 && ARX <=130){RX=128;}
+  else if(ARX>=250){RX=255;}
   else {RX=ARX;}
 
-  if(ALY==122){LY=ALY+6;}
-  else if(ALY==254){LY=ALY+1;}
+  if(ALY>=120 && ALY<=130){LY=128;}
+  else if(ALY>=250){LY=255;}
   else {LY=ALY;}
   
-  if(ALX==124){LX=ALX+4;}
-  else if(ALX==254){LX=ALX+1;}
+  if(ALX>=120 && ALX<=130){LX=128;}
+  else if(ALX>=250){LX=255;}
   else {LX=ALX;}
 }
 
